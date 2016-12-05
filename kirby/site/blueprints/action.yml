@@ -1,0 +1,66 @@
+title: Action
+
+options:
+  status: true
+  sort: flip
+
+fields:
+  title:
+    label: Title
+    type: title
+
+  intro_text:
+    label: Main Text 
+    type: textarea
+
+  further_info:
+    label: Further Information
+    type: textarea
+
+  description:
+    label: Short Description 
+    type: text
+
+  status_message:
+    label: Status Message
+    type: text
+    maxLength: 25
+
+  action_type:
+    label: Action Type
+    type: select
+    options: 
+      call: Call your Representative
+      petition: Petition
+      social: Social Media
+      protest: Protest
+      meeting: Meeting 
+      election: Election
+      boycott: Boycott
+  
+  cause_type: 
+    label: Cause Type
+    type: select
+    options:
+      healthcare: Healthcare 
+      reproductive_rights: Reproductive Rights 
+      environment: Environment 
+      immigration: Immigration 
+      civil_rights: Civil Rights 
+      press_freedom: Press Freedom
+      privacy: Privacy
+      corruption: Corruption
+
+  tags:
+    label: Tags
+    type: tags
+    lower: true
+    separator: ,
+
+
+
+
+
+
+
+

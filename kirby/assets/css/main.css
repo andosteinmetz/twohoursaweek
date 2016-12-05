@@ -1,0 +1,271 @@
+body{
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 1.125em;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 6em;
+    margin: .75em 0;
+}
+
+@media (max-width: 60em){
+    h1{
+        font-size: 3em;
+    }
+}
+
+h2{
+    font-size: 1.4em;
+}
+
+p.intro{
+    margin-bottom: 2em;
+    font-size: 1.75em;
+    line-height: 1.25em;
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 960px;
+    margin: 1em auto;
+    box-sizing: border-box;
+}
+
+.border{
+    border: .5rem solid #000;
+}
+
+.inner-wrap{
+    margin: 0 auto;
+    width: 75%;
+    padding: 2em 0;
+}
+
+@media (max-width: 60em){
+    .inner-wrap{
+        width: 90%;
+    }
+}
+
+/* Actions */
+
+.action{
+    border: .5em solid #000;
+    position: relative;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+@media (max-width: 60em){
+    .action{
+        padding-top: 0;
+    }
+}
+
+.action .action-number{
+    float: left;
+    background: #000;
+    color: #fff;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.action h3, h2{
+    font-size: 2em;
+    font-weight: normal;
+}
+
+@media (max-width: 60em){
+    .action .action-number{
+        float: none;
+        width: 100%;
+        position: static;
+    }
+}
+
+.action .action-number .inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media (max-width: 60em){
+    .action .action-number .inner{
+        position: static;
+        top: 0;
+        left: 0;
+        transform: none;
+        -webkit-transform: none;
+    }
+}
+
+.action .action-number .number{
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.action main{
+    padding-left: 35%;
+    padding-right: 5%;
+    font-size: .75em;
+}
+
+@media (max-width: 60em){
+    .action main{
+        padding-left: 1em;
+    }
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(0, -65%);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.slick-arrow:hover{
+    cursor: pointer;
+}
+
+.slick-next{
+    right: -1.5em;
+}
+
+.slick-prev{
+    left: -1.5em;
+}
+
+@media (max-width: 60em){
+    .slick-arrow{
+        font-size: 1em;
+        top: -2em;
+    }
+    .slick-next{
+        right: 1em;
+    }
+    .slick-prev{
+        left: 1em;
+    }
+}
+
+/* Mailchimp */
+
+#mc_embed_signup{
+    border: .5em solid #000;
+    padding: 1em;
+}
+
+@media (max-width: 60em){
+    #mc_embed_signup {
+        border: 5px solid #000;
+    }
+}
+
+.mc-field-group{
+    width: 100%;
+}
+
+.mc-field-group label{
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.mc-field-group label[for="mce-group[1279]-1279-0"], .mc-field-group label[for="mce-EMAILTYPE-0"], .mc-field-group label[for="mce-EMAILTYPE-1"]{
+    display: inline;
+    margin-right:10px;
+}
+
+.mc-field-group input[type="text"], .mc-field-group input[type="email"]{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+#mc-embedded-subscribe{
+    color: #fff;
+    background: #000;
+    border: 0;
+    padding: .25em;
+    font-size: 1em;
+}
+
+.mc-field-group ul{
+    padding: 0;
+}
+
+.mc-field-group ul li{
+    list-style: none;
+    margin-bottom: .75em;
+}
+
+/* Google Forms */
+
+.styled-select{
+    font-size: 1em;
+    background: none;
+    border: .25em solid #000;
+    margin-bottom: 1em;
+}
+
+#form-container{
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+#form-container.hidden, .hidden{
+    display: none;
+    height: 0;
+    transition: height .5s ease-in-out;
+    -moz-transition: height .5s ease-in-out;
+}
+
+.embed-container{
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+
+.embed-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-copyright{
+    margin-top: 4em;
+    color: #aaa;
+}
+
+.action-link{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.125em;
+    padding-bottom: 1em;
+}
+
+.action-link:hover{
+    cursor: pointer;
+}
+
+.action-link::after{
+    content: " >";
+}
+
+.action-link:focus { outline: 0; }

@@ -1,0 +1,9 @@
+title: Actions
+
+deletable: false
+
+pages: true
+  template: action
+  sort: flip
+
+files: false

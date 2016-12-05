@@ -1,0 +1,97 @@
+body{
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 1.125em;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 6em;
+    margin: .75em 0;
+}
+
+@media (max-width: 60em){
+    h1{
+        font-size: 3em;
+    }
+}
+
+h2{
+    font-size: 2em;
+}
+
+p.intro{
+    margin-bottom: 4em;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 960px;
+    margin: 1em auto;
+}
+
+.inner-wrap{
+    margin: 0 auto;
+    width: 75%;
+    padding: 2em 0;
+}
+
+@media (max-width: 60em){
+    .inner-wrap{
+        width: 90%;
+    }
+}
+
+#mc_embed_signup{
+    border: 20px solid #000;
+    padding: 1em;
+}
+
+@media (max-width: 60em){
+    #mc_embed_signup {
+        border: 5px solid #000;
+    }
+}
+
+.mc-field-group{
+    width: 100%;
+}
+
+.mc-field-group label{
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.mc-field-group label[for="mce-group[1279]-1279-0"], .mc-field-group label[for="mce-EMAILTYPE-0"], .mc-field-group label[for="mce-EMAILTYPE-1"]{
+    display: inline;
+    margin-right:10px;
+}
+
+.mc-field-group input[type="text"], .mc-field-group input[type="email"]{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+#mc-embedded-subscribe{
+    color: #fff;
+    background: #000;
+    border: 0;
+    padding: .25em;
+    font-size: 1em;
+}
+
+.mc-field-group ul{
+    padding: 0;
+}
+
+.mc-field-group ul li{
+    list-style: none;
+    margin-bottom: .75em;
+}
