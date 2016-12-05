@@ -9,10 +9,11 @@
 		<main>
 			<h3><?php echo ucfirst($data->title()->html()); ?></h3>
 			<?php echo $data->intro_text()->markdown(); ?>
-			<a class="read-more action-link">What you can do</a>
+			<a class="read-more action-link">What you can do <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<div class="further-info hidden">
 				<?php echo $data->further_info()->markdown(); ?>
 			</div>
 		</main>
+		<?php // if($data->status_message()) { echo '<div class="status-message">' . $data->status_message()->html() . '</div>';} ?>
 	</article>
 </section>

@@ -2,8 +2,9 @@ var $calendarToggle,
 	$submissionForm,
 	$formContainer,
 	$calendarContainer,
-	$calendarToggle,
-	$readMoreLinks;
+	$calendarToggle;
+
+var	$readMoreLinks;
 
 var formSelector;
 
@@ -22,15 +23,17 @@ $('document').ready(function(){
 	$('#actions').slick({
 		centerMode: false,
 		arrows: true,
-		nextArrow: '<span class="slick-next"> > </span>',
-		prevArrow: '<span class="slick-prev"> < </span>'
+		nextArrow: '<i class="fa fa-angle-right slick-next" aria-hidden="true"></i>',
+		prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
 	});
 
-	$('#actions').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		//collapseFurtherInfo(currentSlide);
-	});
+	//$('#actions').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	//	collapseFurtherInfo(currentSlide);
+	//});
 
-	$('#calendar-toggle').click(toggleCalendar);
+	makeToggleLink('#calendar-toggle', '#calendar-container', 'Show Calendar', 'Hide Calendar');
+	makeToggleLink('#toggle-signup', '#signup-form', 'Sign Up', 'Hide Form');
+
 	$readMoreLinks.click(readMore);
 });
 
@@ -44,30 +47,45 @@ function selectForm(){
 		$formContainer.removeClass('hidden');
 	}
 	if(url == ''){
-		var text = $container.hasClass('hidden')
 		$formContainer.addClass('hidden');
 	}
 }
 
-function toggleCalendar(){
-	var isHidden = $calendarContainer.hasClass('hidden');
-	var newText = isHidden ? 'Hide Calendar' : 'View Calendar';
-	$calendarContainer.toggleClass('hidden');
-	$calendarToggle.text(newText);
-}
+// deprecated
+//function toggleCalendar(){
+//	var isHidden = $calendarContainer.hasClass('hidden');
+//	var newText = isHidden ? 'Hide Calendar' : 'View Calendar';
+//	$calendarContainer.toggleClass('hidden');
+//	$calendarToggle.text(newText);
+//}
 
 function readMore(){
 	console.log($(this).siblings('.further-info')[0]);
 	var furtherInfo = $(this).siblings('.further-info')[0];
 	$(furtherInfo).toggleClass('hidden'); 
+	$(this).toggleClass('active');
 }
 
-function collapseFurtherInfo(slide){
-  	var currentSlide = $('#actions').find('.action')[slide];
+// not working as expected
+function collapseFurtherInfo(actionIndex){
+  	var currentSlide = $('#actions').find('.action')[actionIndex];
   	console.log(currentSlide);
   	var $furtherInfo = $($(currentSlide).find('.further-info')[0]);
   	console.log($furtherInfo);
   	if(!$furtherInfo.hasClass('hidden')){
   		$furtherInfo.addClass('hidden');
   	}
+}
+
+function makeToggleLink(linkSelector, targetSelector, showText, hideText){
+	var $link = linkSelector.charAt(0) == '#' ? $(linkSelector) : $(document.getElementsByClassName(linkSelector)[0]);
+	var $target = $(targetSelector);
+	$link.click(function(){
+		var isHidden = $target.hasClass('hidden');
+		var newText = isHidden ? hideText : showText;
+		var oldText = isHidden ? showText : hideText;
+		$target.toggleClass('hidden');
+		$link.toggleClass('active');
+		$link.html.replace(oldText, newText);
+	});
 }

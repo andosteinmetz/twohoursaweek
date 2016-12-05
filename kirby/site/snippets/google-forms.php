@@ -1,4 +1,4 @@
-<div class="wrapper border">
+<div id="forms" class="wrapper border">
 	<div class="inner-wrap">
 		<h2>Connect With Us</h2>
 		<p>

@@ -25,6 +25,24 @@ p.intro{
     line-height: 1.25em;
 }
 
+/* sections */
+
+#calendar{
+    background: #dce7ff;
+}
+
+#forms{
+    background: #eafbec;
+}
+
+#mailchimp{
+    background: #ededed;
+}
+
+#mailchimp .inner-wrap{
+    background: #fff;
+}
+
 .wrapper{
     width: 90%;
     max-width: 960px;
@@ -136,11 +154,11 @@ p.intro{
 }
 
 .slick-next{
-    right: -1.5em;
+    right: -1em;
 }
 
 .slick-prev{
-    left: -1.5em;
+    left: -1em;
 }
 
 @media (max-width: 60em){
@@ -157,6 +175,11 @@ p.intro{
 }
 
 /* Mailchimp */
+
+#mc_embed_signup h2{
+    font-size: 2em !important;
+    font-weight: normal !important;
+}
 
 #mc_embed_signup{
     border: .5em solid #000;
@@ -215,7 +238,7 @@ p.intro{
 
 .styled-select{
     font-size: 1em;
-    background: none;
+    background: #fff;
     border: .25em solid #000;
     margin-bottom: 1em;
 }
@@ -260,12 +283,28 @@ p.intro{
     padding-bottom: 1em;
 }
 
+.action .action-link{
+    font-size: 1.25em;
+}
+
 .action-link:hover{
     cursor: pointer;
 }
 
-.action-link::after{
-    content: " >";
+.action-link:focus { outline: 0; }
+
+.action-link.active .fa{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
 }
 
-.action-link:focus { outline: 0; }
+.status-message{
+    font-size: 2.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
