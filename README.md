@@ -1,4 +1,5 @@
-___2 Hours a Week___
+2 Hours a Week
+==============
 
 This is the website for 2 Hours a Week.
 
