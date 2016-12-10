@@ -8,17 +8,56 @@ var	$readMoreLinks;
 
 var formSelector;
 
+var selectForm;
+
+var colorCodes = {
+	electoral: '#badff1',
+	mindfulness: '#cfcfeb',
+	two_hours_a_week: '#efeff1',
+	stop_trump: '#fece82',
+	personal: '#fef991',
+	policy: '#d2f0d4'
+};
+
+var isMobile = false;
+
 
 $('document').ready(function(){
+
+	isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
+	
 
 	// initialize jquery variables
 	$submissionForm = $('#submission-form');
 	$formContainer = $('#form-container');
 	$calendarContainer = $('#calendar-container');
 	$calendarToggle = $('#calendar-toggle');
-	$readMoreLinks = $('.read-more')
+	$readMoreLinks = $('.read-more');
 
 	formSelector = document.getElementById('form-selector');
+
+	var selectFormDesktop = function(){
+		var url = formSelector.options[formSelector.selectedIndex].value;
+		
+		var isHidden = $formContainer.hasClass('hidden');
+	
+		$submissionForm.attr('src', url);
+		if(isHidden){
+			$formContainer.removeClass('hidden');
+		}
+		if(url == ''){
+			$formContainer.addClass('hidden');
+		}
+	}
+
+	var selectFormMobile = function(){
+		var url = formSelector.options[formSelector.selectedIndex].value;
+		window.open(url, "_system"); 
+	}
+
+	var selectForm = isMobile ? selectFormMobile : selectFormDesktop;
+
+	document.getElementById('form-selector').onchange = selectForm;
 
 	$('#actions').slick({
 		centerMode: false,
@@ -27,60 +66,35 @@ $('document').ready(function(){
 		prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
 	});
 
-	//$('#actions').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-	//	collapseFurtherInfo(currentSlide);
-	//});
+	$readMoreLinks.click(readMore);
 
-	makeToggleLink('#calendar-toggle', '#calendar-container', 'Show Calendar', 'Hide Calendar');
 	makeToggleLink('#toggle-signup', '#signup-form', 'Sign Up', 'Hide Form');
 
-	$readMoreLinks.click(readMore);
+	if(!isMobile){
+		makeToggleLink('#calendar-toggle', '#calendar-container', 'Show Calendar', 'Hide Calendar');
+	}
+	else{
+
+	}
+
 });
-
-function selectForm(){
-	var url = formSelector.options[formSelector.selectedIndex].value;
-	
-	var isHidden = $formContainer.hasClass('hidden');
-
-	$submissionForm.attr('src', url);
-	if(isHidden){
-		$formContainer.removeClass('hidden');
-	}
-	if(url == ''){
-		$formContainer.addClass('hidden');
-	}
-}
-
-// deprecated
-//function toggleCalendar(){
-//	var isHidden = $calendarContainer.hasClass('hidden');
-//	var newText = isHidden ? 'Hide Calendar' : 'View Calendar';
-//	$calendarContainer.toggleClass('hidden');
-//	$calendarToggle.text(newText);
-//}
 
 function readMore(){
 	console.log($(this).siblings('.further-info')[0]);
 	var furtherInfo = $(this).siblings('.further-info')[0];
-	$(furtherInfo).toggleClass('hidden'); 
-	$(this).toggleClass('active');
-}
-
-// not working as expected
-function collapseFurtherInfo(actionIndex){
-  	var currentSlide = $('#actions').find('.action')[actionIndex];
-  	console.log(currentSlide);
-  	var $furtherInfo = $($(currentSlide).find('.further-info')[0]);
-  	console.log($furtherInfo);
-  	if(!$furtherInfo.hasClass('hidden')){
-  		$furtherInfo.addClass('hidden');
-  	}
+	$('#actions').toggleClass('expanded');
+	//$(furtherInfo).toggleClass('hidden'); 
+	//$(this).toggleClass('active');
+	$readMoreLinks.each(function(){
+		$(this).toggleClass('active');
+	});
 }
 
 function makeToggleLink(linkSelector, targetSelector, showText, hideText){
 	var $link = linkSelector.charAt(0) == '#' ? $(linkSelector) : $(document.getElementsByClassName(linkSelector)[0]);
 	var $target = $(targetSelector);
-	$link.click(function(){
+	$link.click(function(e){
+		e.preventDefault();
 		var isHidden = $target.hasClass('hidden');
 		var newText = isHidden ? hideText : showText;
 		var oldText = isHidden ? showText : hideText;

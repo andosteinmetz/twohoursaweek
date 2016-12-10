@@ -25,22 +25,72 @@ p.intro{
     line-height: 1.25em;
 }
 
+a{
+    color: #000;
+}
+
 /* sections */
 
 #calendar{
-    background: #dce7ff;
+    background: #dce8e4;
 }
 
 #forms{
-    background: #eafbec;
+    background: #f1e6ec;
 }
 
 #mailchimp{
     background: #ededed;
 }
 
-#mailchimp .inner-wrap{
-    background: #fff;
+/* action types */
+
+.anti_trump.action{
+    background: #fece82;
+}
+
+.anti_trump.action .action-number{
+    color: #fece82;
+}
+
+.electoral.action{
+    background: #badff1;
+}
+
+.electoral.action .action-number{
+    color: #badff1;
+}
+
+.mindfulness.action{
+    background: #cfcfeb;
+}
+
+.mindfulness.action .action-number{
+    color: #cfcfeb;
+}
+
+.two_hours.action{
+    background: #efeff1;
+}
+
+.two_hours.action .action-number{
+    color: #efeff1;
+}
+
+.personal.action{
+    background: #fef991;
+}
+
+.personal.action .action-number{
+    color: #fef991;
+}
+
+.policy.action{
+    background: #d2f0d4;
+}
+
+.policy.action .action-number{
+    color: #d2f0d4;
 }
 
 .wrapper{
@@ -93,7 +143,7 @@ p.intro{
 
 .action h3, h2{
     font-size: 2em;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 @media (max-width: 60em){
@@ -108,8 +158,9 @@ p.intro{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    top: 6rem;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0%);
     text-align: center;
 }
 
@@ -132,6 +183,14 @@ p.intro{
     padding-left: 35%;
     padding-right: 5%;
     font-size: .75em;
+}
+
+.further-info{
+    display: none;
+}
+
+#actions.expanded .further-info{
+    display: block;
 }
 
 @media (max-width: 60em){
@@ -164,13 +223,16 @@ p.intro{
 @media (max-width: 60em){
     .slick-arrow{
         font-size: 1em;
-        top: -2em;
+        top: 1.75em;
+        font-size: 2em;
+        color: #fff;
     }
     .slick-next{
         right: 1em;
     }
     .slick-prev{
         left: 1em;
+        z-index: 1;
     }
 }
 
@@ -188,7 +250,7 @@ p.intro{
 
 @media (max-width: 60em){
     #mc_embed_signup {
-        border: 5px solid #000;
+        border: .5em solid #000;
     }
 }
 
@@ -234,12 +296,16 @@ p.intro{
     margin-bottom: .75em;
 }
 
+#mc_embed_signup .asterisk{
+    color: #000 !important;
+}
+
 /* Google Forms */
 
 .styled-select{
     font-size: 1em;
     background: #fff;
-    border: .25em solid #000;
+    border: .125em solid #000;
     margin-bottom: 1em;
 }
 
@@ -281,6 +347,8 @@ p.intro{
     font-weight: bold;
     font-size: 1.125em;
     padding-bottom: 1em;
+    color: #000;
+    text-decoration: none;
 }
 
 .action .action-link{
@@ -307,4 +375,30 @@ p.intro{
     color: #fff;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
+}
+
+@media (max-width: 60em){
+    .electoral.action .slick-arrow{
+        color: #badff1;
+    }
+    
+    .anti_trump.action .slick-arrow{
+        color: #fece82;
+    }
+    
+    .mindfulness.action .slick-arrow{
+        color: #badff1;
+    }
+    
+    .two_hours.action .slick-arrow{
+        color: #efeff1;
+    }
+    
+    .personal.action .slick-arrow{
+        color: #fef991;
+    }
+    
+    .policy.action .slick-arrow{
+        color: #d2f0d4;
+    }
 }

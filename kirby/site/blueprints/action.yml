@@ -30,13 +30,13 @@ fields:
     label: Action Type
     type: select
     options: 
-      call: Call your Representative
-      petition: Petition
-      social: Social Media
-      protest: Protest
-      meeting: Meeting 
-      election: Election
-      boycott: Boycott
+      electoral: Elections, Party Politics, Moving Left - Blue
+      mindfulness: Mindfulness, Being The Change - Purple
+      stops_and_checks: Stops and Checks - Pink
+      two_hours: 2 HAW Specific - Grey
+      anti_trump: Anti Trump - Orange ;-p
+      personal: Personal Actions - Yellow
+      policy: Policy Issues - Green
   
   cause_type: 
     label: Cause Type

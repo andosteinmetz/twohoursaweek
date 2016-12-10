@@ -5,7 +5,7 @@
 			Do you have an idea for a daily action? Or do you know of an organization that we should be working with?
 		</p>
 		<form>
-			<select id="form-selector" class="styled-select" onchange="selectForm()">
+			<select id="form-selector" class="styled-select">
 				<option value="" selected>Tell Us!</option>
 				<option value="https://docs.google.com/forms/d/e/1FAIpQLSe3SiD9DkWP_hW0hKc0qsn8n0mQ05aWyCFd1zDHLmlJ-3PE8w/viewform">Suggest an Action</option>
 				<option value="https://docs.google.com/forms/d/e/1FAIpQLSdaILQESCRBpKNVBthIhLpuLJDMmHwkDRL92BQiwFrqcLKqoA/viewform">Suggest an Event</option>
