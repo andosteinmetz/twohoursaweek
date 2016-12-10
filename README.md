@@ -13,8 +13,9 @@ To set up the environment using MAMP:
 
 * open MAMP 
 * click 'Preferences' and go to the 'Apache Tab'
-* click 'Select' below the 'Document Root' 
-* navigate to `2hoursaweek.org/kirby and confirm`
+* click 'Select' below the 'Document Root' text field
+
+* navigate to 2hoursaweek.org/kirby and confirm
 * hit 'OK' and click 'Start Servers'
 
 The data structure of an action is defined in the `kirby/site/blueprints/action.php` file in YAML.
