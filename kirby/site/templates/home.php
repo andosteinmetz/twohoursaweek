@@ -5,7 +5,7 @@
     <div class="wrapper">
     <section id="actions">
       <?php 
-        foreach($pages->find('actions')->children()->flip() as $action){
+        foreach($pages->find('actions')->children()->visible()->flip() as $action){
           snippet('action', array('data' => $action));
       }
       ?>
