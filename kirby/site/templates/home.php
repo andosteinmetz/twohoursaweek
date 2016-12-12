@@ -18,6 +18,8 @@
 
     <?php snippet('google-forms'); ?>
 
+    <?php snippet('petitions-links'); ?>
+
     <div class="text wrap">
       <?= $page->text()->kirbytext() ?>
     </div>

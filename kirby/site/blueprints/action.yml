@@ -16,6 +16,7 @@ fields:
   further_info:
     label: Further Information
     type: textarea
+    help: this is displayed in the area below the 'What you can do' link
 
   description:
     label: Short Description 
