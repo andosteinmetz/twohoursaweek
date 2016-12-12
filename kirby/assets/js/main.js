@@ -100,6 +100,6 @@ function makeToggleLink(linkSelector, targetSelector, showText, hideText){
 		var oldText = isHidden ? showText : hideText;
 		$target.toggleClass('hidden');
 		$link.toggleClass('active');
-		$link.html.replace(oldText, newText);
+		$link.html().replace(oldText, newText);
 	});
 }

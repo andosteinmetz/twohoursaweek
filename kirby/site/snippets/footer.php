@@ -1,4 +1,4 @@
-  <footer class="footer cf" role="contentinfo">
+  <footer class="footer cf" role="contentinfo" style="padding-top: 2em">
     <div class="wrapper wide">
 
       <p class="footer-copyright"><?php
@@ -6,6 +6,13 @@
         // but remove all HTML like paragraph tags:
         echo html::decode($site->copyright()->kirbytext())
       ?></p>
+
+      <div class="social-links">
+        <a href="https://www.facebook.com/2hoursaweek/?fref=ts" target="_blank"><img src="/assets/images/dark-facebook-96.png"></a>
+        <a href="https://twitter.com/2hoursaweek/" target="_blank"><img src="/assets/images/dark-twitter-96.png"></a>
+        <a href="mailto:actions@2hoursaweek.org"><img src="/assets/images/dark-forwardtofriend-96.png"></a>
+      </div>
+
     </div>
   </footer>
   <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>

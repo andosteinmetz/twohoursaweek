@@ -336,9 +336,38 @@ a{
     height: 100%;
 }
 
+@media (max-width: 60em){
+    .forms-desktop{
+        display: none;
+    }
+    .forms-mobile{
+        display: block;
+    }
+}
+
+@media (min-width: 61em){
+    .forms-desktop{
+        display: block;
+    }
+    .forms-mobile{
+        display: none;
+    }
+}
+
 .footer-copyright{
     margin-top: 4em;
     color: #aaa;
+    float: right;
+    margin-top: 0em;
+}
+
+.footer .social-links{
+    float: left;
+}
+
+.footer .social-links img{
+    width: 32px;
+    height: 32px;
 }
 
 .action-link{
