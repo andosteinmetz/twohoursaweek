@@ -32,11 +32,11 @@ a{
 /* sections */
 
 #calendar{
-    background: #dce8e4;
+    background: #e5ecf9;
 }
 
 #forms{
-    background: #f1e6ec;
+    background: #f8f2f5;
 }
 
 #mailchimp{
@@ -44,49 +44,49 @@ a{
 }
 
 #petitions-links{
-    background: #ededed;
+    background: #f9e1d6;
 }
 
 /* action types */
 
 .anti_trump.action{
-    background: #fece82;
+    background: #ffd394;
 }
 
 .anti_trump.action .action-number{
-    color: #fece82;
+    color: #ffd394;
 }
 
 .electoral.action{
-    background: #badff1;
+    background: #c4e8f7;
 }
 
 .electoral.action .action-number{
-    color: #badff1;
+    color: #c4e8f7;
 }
 
 .mindfulness.action{
-    background: #cfcfeb;
+    background: #d9d9f4;
 }
 
 .mindfulness.action .action-number{
-    color: #cfcfeb;
+    color: #d9d9f4;
 }
 
 .two_hours.action{
-    background: #efeff1;
+    background: #efefef;
 }
 
 .two_hours.action .action-number{
-    color: #efeff1;
+    color: #efefef;
 }
 
 .personal.action{
-    background: #fef991;
+    background: #fff3b4;
 }
 
 .personal.action .action-number{
-    color: #fef991;
+    color: #fff3b4;
 }
 
 .policy.action{
@@ -95,6 +95,14 @@ a{
 
 .policy.action .action-number{
     color: #d2f0d4;
+}
+
+.stops_and_checks.action{
+    background: #ffe3e8;
+}
+
+.stops_and_checks.action .action-number{
+    color: #ffe3e8
 }
 
 .wrapper{
@@ -115,6 +123,9 @@ a{
 }
 
 @media (max-width: 60em){
+    .wrapper{
+        width: 95%;
+    }
     .inner-wrap{
         width: 90%;
     }
@@ -205,7 +216,7 @@ a{
 
 .slick-arrow{
     position: absolute;
-    top: 50%;
+    top: 3em;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(0, -65%);
     font-size: 3em;
@@ -274,6 +285,10 @@ a{
     margin-right:10px;
 }
 
+.mc-field-group.size1of2{
+    float: none !important;
+}
+
 .mc-field-group input[type="text"], .mc-field-group input[type="email"]{
     display: block;
     width: 100%;
@@ -283,12 +298,30 @@ a{
     padding: 1em;
 }
 
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 #mc-embedded-subscribe{
     color: #fff;
-    background: #000;
+    background: #4285f4;
     border: 0;
     padding: .25em;
     font-size: 1em;
+}
+
+#mc_embed_signup .button{
+    background: #4285f4 !important;
 }
 
 .mc-field-group ul{
@@ -302,6 +335,10 @@ a{
 
 #mc_embed_signup .asterisk{
     color: #000 !important;
+}
+
+#phone-number-label{
+    white-space: nowrap;
 }
 
 /* Google Forms */
@@ -358,6 +395,10 @@ a{
     }
 }
 
+.footer{
+    padding: 1em 0;
+}
+
 .footer-copyright{
     margin-top: 4em;
     color: #aaa;
@@ -370,6 +411,7 @@ a{
 }
 
 .footer .social-links img{
+    margin: 0 .25em;
     width: 32px;
     height: 32px;
 }
@@ -385,7 +427,7 @@ a{
 }
 
 .action .action-link{
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 .action-link:hover{

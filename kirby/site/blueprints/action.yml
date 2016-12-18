@@ -14,7 +14,7 @@ fields:
     type: textarea
 
   further_info:
-    label: Further Information
+    label: What You Can Do
     type: textarea
     help: this is displayed in the area below the 'What you can do' link
 

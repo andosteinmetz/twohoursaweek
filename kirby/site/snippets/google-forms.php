@@ -2,7 +2,7 @@
 	<div class="inner-wrap">
 		<h2>Connect With Us</h2>
 		<p>
-			Do you have an idea for a daily action? Or do you know of an organization that we should be working with?
+			Do you have an idea for a Daily Action? Did you hear of an upcoming event we should know about? Do you have a success story to share with us? Do you know of an action group that we should be working with?
 		</p>
 		<div class="forms-desktop">
 			<form>
@@ -25,7 +25,6 @@
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSdaILQESCRBpKNVBthIhLpuLJDMmHwkDRL92BQiwFrqcLKqoA/viewform" target="_blank" class="action-link">Suggest an Event <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSdgpSBknijjY62ZZdKCT5vueuBdfAex3Eu61p-bz8NzseLs5Q/viewform" target="_blank" class="action-link">Submit a Success Story <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGHe1NkznDN3srJfI_seaEmTXgLB1zujAUGUVJWGHYewDvTA/viewform" target="_blank" class="action-link">Connect Us with Another Group <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLSfHZGYDR31MI9Tx20-KT9eutgBcMqY-i_kdf7gi12r0pFrNmw/viewform" target="_blank" class="action-link">Start an action group <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 		</div>
 	</div>
 </div>

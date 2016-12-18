@@ -25,16 +25,16 @@
                             </label>
                                 <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
                             </div>
-                            <div class="mc-field-group">
-                                <label for="mce-MMERGE3">Zip Code </label>
+                            <div class="mc-field-group size1of2 clearfix">
+                                <label for="mce-MMERGE3">Zip Code (for local actions) </label>
                                 <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3">
                             </div>
                             <div class="mc-field-group size1of2">
-                                <label for="mce-MMERGE4">Phone Number </label>
+                                <label id="phone-number-label" for="mce-MMERGE4">Phone Number (to get more involved) </label>
                                 <input type="text" name="MMERGE4" class="" value="" id="mce-MMERGE4">
                             </div>
                             <div class="mc-field-group input-group">
-                                <strong>Want to get more involved with 2 Hours A Week? </strong>
+                                <strong>In addition to Daily Action Emails, I’d like to receive information about attending local meetings and/or joining the organizing committees of 2 Hours A Week.</strong>
                                 <ul><li><input type="checkbox" value="2" name="group[1279][2]" id="mce-group[1279]-1279-0"><label for=" mce-group[1279]-1279-0">                     Yes, please!</label></li>
                             </ul>
                             </div>
