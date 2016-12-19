@@ -7,7 +7,7 @@
                 <form action="//2hoursaweek.us14.list-manage.com/subscribe/post?u=542e52557cb249fb2535906ea&amp;id=7733fecb16" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <h2>Get Our Daily Action Email</h2>
-                        <p>It’s the single most important action of the day, based on collective brain power, delivered to your inbox once a day.</p>
+                        <p>A single essential action, based on collective brainpower and strategic research, delivered to your inbox daily.</p>
                         <a id="toggle-signup" class='action-link'>Sign Up <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         <div id="signup-form" class="hidden">
                             <div class="mc-field-group">
@@ -25,19 +25,22 @@
                             </label>
                                 <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
                             </div>
-                            <div class="mc-field-group size1of2 clearfix">
+                            <div class="mc-field-group">
                                 <label for="mce-MMERGE3">Zip Code (for local actions) </label>
                                 <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3">
                             </div>
-                            <div class="mc-field-group size1of2">
+                            <div class="mc-field-group">
                                 <label id="phone-number-label" for="mce-MMERGE4">Phone Number (to get more involved) </label>
                                 <input type="text" name="MMERGE4" class="" value="" id="mce-MMERGE4">
                             </div>
                             <div class="mc-field-group input-group">
-                                <strong>In addition to Daily Action Emails, I’d like to receive information about attending local meetings and/or joining the organizing committees of 2 Hours A Week.</strong>
-                                <ul><li><input type="checkbox" value="2" name="group[1279][2]" id="mce-group[1279]-1279-0"><label for=" mce-group[1279]-1279-0">                     Yes, please!</label></li>
+                                <strong>In addition to Daily Action Emails, I’d like to receive:</strong>
+                                <ul><li><input type="checkbox" value="2" name="group[1279][2]" id="mce-group[1279]-1279-0"><label for=" mce-group[1279]-1279-0">Invitations to attend local meetings</label></li>
+                                <li><input type="checkbox" value="1" name="group[1827][1]" id="mce-group[1827]-1827-0"><label for="mce-group[1827]-1827-0">Information about joining the organizing committee</label></li>
+
                             </ul>
                             </div>
+
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>

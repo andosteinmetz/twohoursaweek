@@ -33,7 +33,6 @@ $('document').ready(function(){
 	$calendarContainer = $('#calendar-container');
 	$calendarToggle = $('#calendar-toggle');
 	$readMoreLinks = $('.read-more');
-
 	formSelector = document.getElementById('form-selector');
 
 	var selectFormDesktop = function(){
@@ -57,11 +56,16 @@ $('document').ready(function(){
 
 	var selectForm = isMobile ? selectFormMobile : selectFormDesktop;
 
+	var initSlide = window.location.hash ? window.location.hash.split('#')[1] : null;
+
 	document.getElementById('form-selector').onchange = selectForm;
 
 	$('#actions').slick({
 		centerMode: false,
 		arrows: true,
+		//rtl: true,
+		//slidesToScroll: -1,
+		//initialSlide: initSlide,
 		nextArrow: '<i class="fa fa-angle-right slick-next" aria-hidden="true"></i>',
 		prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
 	});
@@ -83,8 +87,6 @@ function readMore(){
 	console.log($(this).siblings('.further-info')[0]);
 	var furtherInfo = $(this).siblings('.further-info')[0];
 	$('#actions').toggleClass('expanded');
-	//$(furtherInfo).toggleClass('hidden'); 
-	//$(this).toggleClass('active');
 	$readMoreLinks.each(function(){
 		$(this).toggleClass('active');
 	});

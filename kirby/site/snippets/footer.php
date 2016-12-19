@@ -11,6 +11,7 @@
         <a href="https://www.facebook.com/2hoursaweek/?fref=ts" target="_blank"><img src="/assets/images/dark-facebook-96.png"></a>
         <a href="https://twitter.com/2hoursaweek/" target="_blank"><img src="/assets/images/dark-twitter-96.png"></a>
         <a href="mailto:twohoursaweek@gmail.com"><img src="/assets/images/dark-forwardtofriend-96.png"></a>
+        <a href="/about" class="footer-link">About</a>
       </div>
 
     </div>

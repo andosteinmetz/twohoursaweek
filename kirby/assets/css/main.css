@@ -9,6 +9,10 @@ h1{
     margin: .75em 0;
 }
 
+h1 a{
+    text-decoration: none;
+}
+
 @media (max-width: 60em){
     h1{
         font-size: 3em;
@@ -255,7 +259,6 @@ a{
 
 #mc_embed_signup h2{
     font-size: 2em !important;
-    font-weight: normal !important;
 }
 
 #mc_embed_signup{
@@ -414,6 +417,19 @@ a{
     margin: 0 .25em;
     width: 32px;
     height: 32px;
+}
+
+.footer-link{
+    position: relative;
+    font-size: .825em;
+    color: #fff;
+    background: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: 1.25em;
+    -webkit-border-radius: 1em;
+    top: -.75em;
 }
 
 .action-link{
