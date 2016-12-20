@@ -430,6 +430,11 @@ a{
     border-radius: 1.25em;
     -webkit-border-radius: 1em;
     top: -.75em;
+    border: 0;
+}
+
+#donate-button{
+    display: inline;
 }
 
 .action-link{

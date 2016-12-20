@@ -12,6 +12,7 @@
         <a href="https://twitter.com/2hoursaweek/" target="_blank"><img src="/assets/images/dark-twitter-96.png"></a>
         <a href="mailto:twohoursaweek@gmail.com"><img src="/assets/images/dark-forwardtofriend-96.png"></a>
         <a href="/about" class="footer-link">About</a>
+        <?php echo snippet('donate-button'); ?>
       </div>
 
     </div>

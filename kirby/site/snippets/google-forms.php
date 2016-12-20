@@ -27,10 +27,5 @@
 			<a href="https://docs.google.com/forms/d/e/1FAIpQLSdGHe1NkznDN3srJfI_seaEmTXgLB1zujAUGUVJWGHYewDvTA/viewform" target="_blank" class="action-link">Connect Us with Another Group <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<!--<a href="https://docs.google.com/forms/d/e/1FAIpQLSfHZGYDR31MI9Tx20-KT9eutgBcMqY-i_kdf7gi12r0pFrNmw/viewform" target="_blank" class="action-link">Start an action group <i class="fa fa-angle-right" aria-hidden="true"></i></a>-->
 		</div>
-
-		<div>
-			<?php snippet('submit-action-form'); ?>
-		</div>
-
 	</div>
 </div>
