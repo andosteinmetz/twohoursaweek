@@ -60,6 +60,8 @@ $('document').ready(function(){
 
 	document.getElementById('form-selector').onchange = selectForm;
 
+	$('.action main p a').attr('target', '_blank');
+
 	$('#actions').slick({
 		centerMode: false,
 		arrows: true,

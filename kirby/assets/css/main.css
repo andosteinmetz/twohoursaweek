@@ -437,6 +437,10 @@ a{
     display: inline;
 }
 
+#donate-button:hover{
+    cursor: pointer;
+}
+
 .action-link{
     display: block;
     text-transform: uppercase;
@@ -445,6 +449,7 @@ a{
     padding-bottom: 1em;
     color: #000;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .action .action-link{
