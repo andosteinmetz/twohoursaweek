@@ -6,7 +6,7 @@ body{
 h1{
     text-transform: uppercase;
     font-size: 6em;
-    margin: .75em 0;
+    margin: .25em 0;
 }
 
 h1 a{
@@ -413,7 +413,7 @@ a{
     float: left;
 }
 
-.footer .social-links img{
+.social-links img{
     margin: 0 .25em;
     width: 32px;
     height: 32px;
