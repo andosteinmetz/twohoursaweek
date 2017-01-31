@@ -72,7 +72,7 @@ $('document').ready(function(){
 		prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
 	});
 
-	$readMoreLinks.click(readMore);
+	// $readMoreLinks.click(readMore);
 
 	makeToggleLink('#toggle-signup', '#signup-form', 'Sign Up', 'Hide Form');
 
@@ -86,7 +86,6 @@ $('document').ready(function(){
 });
 
 function readMore(){
-	console.log($(this).siblings('.further-info')[0]);
 	var furtherInfo = $(this).siblings('.further-info')[0];
 	$('#actions').toggleClass('expanded');
 	$readMoreLinks.each(function(){

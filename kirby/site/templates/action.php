@@ -1,19 +1,32 @@
-<?php snippet('header'); ?>
-	<div class="wrapper">
-		<article class="action <?php echo $page->action_type(); ?>">
-		<div class="action-number">
-			<div class="inner">
-				<div>action</div>
-				<div class="number"><?php echo $page->num(); ?></div>
-			</div>
-		</div>
-		<main>
-			<h3><?php echo ucfirst($page->title()->html()); ?></h3>
-			<?php echo $page->intro_text()->kirbytext(); ?>
-			<a class="read-more action-link">What you can do</a>		
-			<?php echo $page->further_info()->kirbytext(); ?>
-		</main>
-		<?php // if($page->status_message()) { echo '<div class="status-message">' . $page->status_message()->html() . '</div>';} ?>
-	</article>
-	</div>
-<?php snippet('footer'); ?>
+		<?php 
+			if( !in_array('mailchimp', params()) ){
+				snippet('header');
+				echo '<div class="wrapper">';
+				snippet('action-detail', $page, false);
+				echo '</div>';
+				snippet('footer');
+			}
+			else{
+				switch( $page->action_type()->value() ){
+					case('electoral'):
+						// blue template
+						break;
+					case('mindfulness'):
+						// purple template
+						break;
+					case('stops_and_checks'):
+						//pink template
+						break;
+					case('two_hours'):
+						// grey template
+						break;
+					case('anti_trump'):
+						// yello/orange template
+						break;
+					case('policy'):
+						// green
+						break;
+				}
+				snippet('action-email-blue');
+			} 
+		?>

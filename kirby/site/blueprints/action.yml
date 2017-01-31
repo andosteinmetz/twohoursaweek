@@ -22,11 +22,6 @@ fields:
     label: Short Description 
     type: text
 
-  mailchimp_archive:
-    label: Mailchimp archive HTML
-    type: textarea
-    help: copy and paste the full Mailchimp archive HTML into this field
-
   status_message:
     label: Status Message
     type: text

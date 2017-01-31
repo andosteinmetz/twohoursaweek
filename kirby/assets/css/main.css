@@ -449,14 +449,13 @@ a{
     padding-bottom: 1em;
     color: #000;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .action .action-link{
     font-size: 1.25rem;
 }
 
-.action-link:hover{
+a.action-link:hover{
     cursor: pointer;
 }
 

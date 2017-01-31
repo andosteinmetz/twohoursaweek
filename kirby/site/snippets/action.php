@@ -9,7 +9,7 @@
 		<main>
 			<h3><?php echo ucfirst($data->title()->html()); ?></h3>
 			<?php echo $data->intro_text()->kirbytext(); ?>
-			<a class="read-more action-link">What you can do <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			<a href="<?php echo $data->url(); ?>" class="read-more action-link">What you can do <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 			<div class="further-info">
 				<?php echo $data->further_info()->kirbytext(); ?>
 			</div>
