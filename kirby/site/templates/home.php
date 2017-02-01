@@ -18,6 +18,13 @@
 
     <?php snippet('google-forms'); ?>
 
+    <?php 
+      $freeform = $pages->find('freeform');
+      if($freeform && !$freeform->isInvisible()){
+        snippet('freeform', array( 'data' => $freeform) );  
+      } 
+    ?>
+
     <?php snippet('petitions-links'); ?>
 
     <div class="text wrap">
