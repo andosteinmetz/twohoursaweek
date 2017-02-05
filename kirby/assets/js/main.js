@@ -2,7 +2,8 @@ var $calendarToggle,
 	$submissionForm,
 	$formContainer,
 	$calendarContainer,
-	$calendarToggle;
+	$calendarToggle,
+	$actions;
 
 var	$readMoreLinks;
 
@@ -33,6 +34,7 @@ $('document').ready(function(){
 	$calendarContainer = $('#calendar-container');
 	$calendarToggle = $('#calendar-toggle');
 	$readMoreLinks = $('.read-more');
+	$actions = $('#actions');
 	formSelector = document.getElementById('form-selector');
 
 	var selectFormDesktop = function(){
@@ -56,21 +58,34 @@ $('document').ready(function(){
 
 	var selectForm = isMobile ? selectFormMobile : selectFormDesktop;
 
-	var initSlide = window.location.hash ? window.location.hash.split('#')[1] : null;
+	//var initSlide = window.location.hash ? window.location.hash.split('#')[1] : null;
+
+	initSlide = window.location.hash ? window.location.hash.split('#')[1] -1 : $('#actions').find('.action').length -1;
 
 	document.getElementById('form-selector').onchange = selectForm;
 
 	$('.action main p a').attr('target', '_blank');
 
-	$('#actions').slick({
+	$actions.slick({
 		centerMode: false,
 		arrows: true,
 		//rtl: true,
 		//slidesToScroll: -1,
-		//initialSlide: initSlide,
+		initialSlide: initSlide,
 		nextArrow: '<i class="fa fa-angle-right slick-next" aria-hidden="true"></i>',
 		prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
 	});
+
+	$actions.on('afterChange', function(){
+		var currentSlide = $actions.slick('slickCurrentSlide');
+		var hash = '#'+ (currentSlide +1);
+		if(history.pushState) {
+		    history.pushState(null, null, hash);
+		}
+		else {
+		    location.hash = hash;
+		}
+	})
 
 	// $readMoreLinks.click(readMore);
 
