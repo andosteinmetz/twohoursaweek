@@ -58,6 +58,12 @@ fields:
     lower: true
     separator: ,
 
+  is_active:
+    type: checkbox
+    label: active?
+    text: Is this an active action?
+    default: 1
+
 
 
 
