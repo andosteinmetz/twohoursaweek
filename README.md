@@ -6,9 +6,14 @@ This is the website for 2 Hours a Week.
 The 1.0 version of the site is in the root directory.
 
 The 2.0 version is in the  `kirby/` folder.
-The new site is currently built on top of Kirby, a simple flat file CMS: http://www.getkirby.com
+The new site is currently built on top of [Kirby](http://www.getkirby.com), a simple flat file CMS.
+[Kirby Documentation](https://getkirby.com/docs).
 
-As a development environment, use whatever you're comfortable with. I have been using MAMP: https://www.mamp.info/en/
+Content Types are defined in `/kirby/site/blueprints` in YML. 
+The data structure of an action is defined in the `kirby/site/blueprints/action.php` file in YAML.
+[Blueprints field types](https://getkirby.com/docs/cheatsheet/#panel-fields).
+
+As a development environment, use whatever you're comfortable with. I have been using [MAMP](https://www.mamp.info/en/). 
 To set up the environment using MAMP: 
 
 * open MAMP 
@@ -17,8 +22,9 @@ To set up the environment using MAMP:
 * navigate to 2hoursaweek.org/kirby and confirm
 * hit 'OK' and click 'Start Servers'
 
-The data structure of an action is defined in the `kirby/site/blueprints/action.php` file in YAML.
 The templates for each section are defined `kirby/site/snippets`.
+
+The homepage template is in `kirby/templates/home.php`.
 
 Javascript and CSS folders are in `kirby/assets`.
 
