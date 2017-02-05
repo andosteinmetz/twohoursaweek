@@ -1,3 +1,28 @@
+<?php 
+	$action_type = $page->action_type()->value();
+	$background_colors = array(
+		'anti_trump'  => '#ffd394',
+		'electoral'   => '#c4e8f7',
+		'mindfulness' => '#d9d9f4',
+		'two_hours'   => '#efefef',
+		'personal'    => '#fff3b4',
+		'policy'      => '#d2f0d4',
+		'stops_and_checks' => '#ffe3e8'
+	);
+
+	$foreground_colors = array(
+		'anti_trump'  => '#edc48a',
+		'electoral'   => '#b6d8e6',
+		'mindfulness' => '#cacae3',
+		'two_hours'   => '#dedede',
+		'personal'    => '#ede2a7',
+		'policy'      => '#c3dfc5',
+		'stops_and_checks' => '#edd3d8'	
+	);
+
+	$background_color = $background_colors[$action_type];
+	$foreground_color = $foreground_colors[$action_type];
+?>
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 	<head>
@@ -233,7 +258,7 @@
 	@tip Set the background color and borders for your email's header area.
 	*/
 		#templateHeader{
-			/*@editable*/background-color:#c4e8f7;
+			/*@editable*/background-color:<?php echo $background_color; ?>;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -271,7 +296,8 @@
 	@tip Set the background color and borders for your email's body area.
 	*/
 		#templateBody{
-			/*@editable*/background-color:#c4e8f7;
+			/*@editable background-color:#c4e8f7;*/
+			background-color: <?php echo $background_color; ?>;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -309,7 +335,7 @@
 	@tip Set the background color and borders for your email's footer area.
 	*/
 		#templateFooter{
-			/*@editable*/background-color:#c4e8f7;
+			/*@editable*/background-color:<?php echo $background_color; ?>;
 			/*@editable*/background-image:none;
 			/*@editable*/background-repeat:no-repeat;
 			/*@editable*/background-position:center;
@@ -658,7 +684,7 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px; font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">
                         
-                            <p style="font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><font face="arial, helvetica, sans-serif">Body Text</font></p>
+                            <p style="font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><font face="arial, helvetica, sans-serif"><?php echo $page->intro_text()->kirbytext(); ?></font></p>
 
                         </td>
                     </tr>
@@ -685,25 +711,7 @@
 				<!--[if gte mso 9]>
 				<td align="center" valign="top" ">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;" class="mcnBoxedTextContentContainer">
-                    <tbody><tr>
-                        
-                        <td style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:18px;">
-                        
-                            <table border="0" cellpadding="18" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #B6D8E6;border: 1px none #000000;">
-                                <tbody><tr>
-                                    <td valign="top" class="mcnTextContent" style="color: #000000;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: left;">
-                                        <div style="text-align: left;"><strong>1. ACTIONS</strong>&nbsp;Text<br>
-&nbsp;</div>
-
-<div style="text-align: left;"><strong>2. ACTIONS</strong>&nbsp;Text</div>
-
-                                    </td>
-                                </tr>
-                            </tbody></table>
-                        </td>
-                    </tr>
-                </tbody></table>
+                
 				<!--[if gte mso 9]>
 				</td>
 				<![endif]-->
@@ -731,13 +739,10 @@
                         
                         <td style="padding-top:9px; padding-left:18px; padding-bottom:9px; padding-right:18px;">
                         
-                            <table border="0" cellpadding="18" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #B6D8E6;border: 1px none #000000;">
+                            <table border="0" cellpadding="18" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: <?php echo $foreground_color; ?>;border: 1px none #000000;">
                                 <tbody><tr>
                                     <td valign="top" class="mcnTextContent" style="color: #000000;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: left;">
-                                        <p style="color: #000000;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: left;"><span style="font-size:14px"><strong>USE THIS SCRIPT&nbsp;(feel free to ad-lib, of course)</strong></span><br>
-<br>
-<em>script</em></p>
-
+                                        <?php echo $page->further_info()->kirbytext(); ?>
                                     </td>
                                 </tr>
                             </tbody></table>
@@ -767,18 +772,18 @@
 				<!--[if mso]>
 				<td valign="top" width="590" style="width:590px;">
 				<![endif]-->
-                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
+                <!--<table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding: 0px 18px 9px; font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">
                         
                             <p style="font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;"><span style="font-size:14px"><strong>WHY IT'S IMPORTANT</strong></span><br>
 <br>
-<?php ?></p>
+<?php  ?></p>
 
                         </td>
                     </tr>
-                </tbody></table>
+                </tbody></table>-->
 				<!--[if mso]>
 				</td>
 				<![endif]-->
