@@ -22,9 +22,11 @@ To set up the environment using MAMP:
 * navigate to 2hoursaweek.org/kirby and confirm
 * hit 'OK' and click 'Start Servers'
 
-The templates for each section are defined `kirby/site/snippets`.
+The templates for each section are defined `kirby/site/snippets`, as is the code for the header and footer.
 
 The homepage template is in `kirby/templates/home.php`.
 
 Javascript and CSS folders are in `kirby/assets`.
+
+The top slider is using [Slick](http://kenwheeler.github.io/slick/).
 
