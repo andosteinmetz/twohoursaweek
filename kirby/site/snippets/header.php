@@ -42,5 +42,5 @@
         <?php echo snippet('donate-button'); ?>
     </div>
     <h1><a href="/"><?php echo $site->title(); ?></a></h1>
-    <p class="intro"><?php echo $site->description(); ?></p>
+    <p class="intro"><?php if ($page->isHomePage()) { echo $site->description(); } ?></p>
   </header>
