@@ -41,6 +41,14 @@
         <a href="/about" class="footer-link">About</a>
         <?php echo snippet('donate-button'); ?>
     </div>
-    <h1><a href="/"><?php echo $site->title(); ?></a></h1>
-    <p class="intro"><?php if ($page->isHomePage()) { echo $site->description(); } ?></p>
+    <?php if ($page->isHomePage()): ?><h1><a href="/"><?php echo $site->title(); ?></a></h1><?php endif; ?>
+    <p class="intro">
+      <?php 
+        if ($page->isHomePage()) { 
+          echo $site->description();
+        } 
+        else{
+          echo '<a href="/"><img class="home-button" src="/assets/images/home.svg"></a>';
+        } ?>     
+    </p>
   </header>

@@ -30,6 +30,10 @@ p.intro{
     line-height: 1.25em;
 }
 
+.home-button{
+    height: 3em;
+}
+
 a{
     color: #000;
 }
@@ -145,13 +149,17 @@ a{
     padding-bottom: 2em;
 }
 
+.action--detail{
+    padding-top: 0;
+}
+
 @media (max-width: 60em){
     .action{
         padding-top: 0;
     }
 }
 
-.action .action-number{
+.action-number{
     float: left;
     background: #000;
     color: #fff;
@@ -159,6 +167,13 @@ a{
     position: absolute;
     top: 0;
     bottom: 0;
+}
+
+.action-number--detail{
+    float: none;
+    width: 100%;
+    position: static;
+    padding: 1rem 0;
 }
 
 .action h3, h2{
@@ -174,7 +189,7 @@ a{
     }
 }
 
-.action .action-number .inner{
+.action-number .inner{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -183,6 +198,15 @@ a{
     -webkit-transform: translate(-50%, 0%);
     text-align: center;
 }
+
+.action-number--detail .inner{
+    position: static;
+    top: 0;
+    left: 0;
+    transform: none;
+    --webkit-transform: none;
+}
+
 
 @media (max-width: 60em){
     .action .action-number .inner{
@@ -203,6 +227,10 @@ a{
     padding-left: 35%;
     padding-right: 5%;
     font-size: .75em;
+}
+
+.action--detail main{
+    padding-left: 5%;
 }
 
 .further-info{

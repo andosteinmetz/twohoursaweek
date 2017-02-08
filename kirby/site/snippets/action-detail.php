@@ -1,5 +1,5 @@
-<article class="action <?php echo $page->action_type(); ?>">
-	<div class="action-number">
+<article class="action action--detail <?php echo $page->action_type(); ?>">
+	<div class="action-number action-number--detail">
 		<div class="inner">
 			<div>action</div>
 			<div class="number"><?php echo $page->num(); ?></div>
