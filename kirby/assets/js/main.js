@@ -81,7 +81,8 @@ $('document').ready(function(){
 			else {
 			    location.hash = hash;
 			}
-		});		
+		});
+				
 		// $readMoreLinks.click(readMore); 
 		document.getElementById('form-selector').onchange = selectForm;
 		makeToggleLink('#toggle-signup', '#signup-form', 'Sign Up', 'Hide Form');

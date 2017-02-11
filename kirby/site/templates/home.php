@@ -16,14 +16,9 @@
 
     <?php snippet('google-calendar'); ?>
 
-    <?php snippet('google-forms'); ?>
+    <?php snippet('educate-act-intro') ?>
 
-    <?php 
-      $freeform = $pages->find('educate-and-act');
-      if($freeform && !$freeform->isInvisible()){
-        snippet('freeform', array( 'data' => $freeform) );  
-      } 
-    ?>
+    <?php snippet('google-forms'); ?>
 
     <?php snippet('petitions-links'); ?>
 
