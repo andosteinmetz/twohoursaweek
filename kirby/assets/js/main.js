@@ -22,12 +22,13 @@ var colorCodes = {
 
 var isMobile = false;
 
+var isHome = document.body.classList.contains('home');
+
 
 $('document').ready(function(){
 
 	isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
 	
-
 	// initialize jquery variables
 	$submissionForm = $('#submission-form');
 	$formContainer = $('#form-container');
@@ -49,54 +50,55 @@ $('document').ready(function(){
 		if(url == ''){
 			$formContainer.addClass('hidden');
 		}
-	}
+	};
 
 	var selectFormMobile = function(){
 		var url = formSelector.options[formSelector.selectedIndex].value;
 		window.open(url, "_system"); 
-	}
+	};
 
 	var selectForm = isMobile ? selectFormMobile : selectFormDesktop;
 
-	//var initSlide = window.location.hash ? window.location.hash.split('#')[1] : null;
+	var doOnHomePage = function(){
+		// initialize slider
+		initSlide = window.location.hash ? window.location.hash.split('#')[1] -1 : $('#actions').find('.action').length -1;
 
-	initSlide = window.location.hash ? window.location.hash.split('#')[1] -1 : $('#actions').find('.action').length -1;
+		$actions.slick({
+			centerMode: false,
+			arrows: true,
+			initialSlide: initSlide,
+			nextArrow: '<i class="fa fa-angle-right slick-next" aria-hidden="true"></i>',
+			prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
+		});
 
-	document.getElementById('form-selector').onchange = selectForm;
+		// update hash on slide change
+		$actions.on('afterChange', function(){
+			var currentSlide = $actions.slick('slickCurrentSlide');
+			var hash = '#'+ (currentSlide +1);
+			if(history.pushState) {
+			    history.pushState(null, null, hash);
+			}
+			else {
+			    location.hash = hash;
+			}
+		});		
+		// $readMoreLinks.click(readMore); 
+		document.getElementById('form-selector').onchange = selectForm;
+		makeToggleLink('#toggle-signup', '#signup-form', 'Sign Up', 'Hide Form');
+
+		if(!isMobile){
+		makeToggleLink('#calendar-toggle', '#calendar-container', 'Show Calendar', 'Hide Calendar');
+		}
+		else{
+	
+		}
+	};
+
+	if(isHome){
+		doOnHomePage();
+	}
 
 	$('.action main p a').attr('target', '_blank');
-
-	$actions.slick({
-		centerMode: false,
-		arrows: true,
-		//rtl: true,
-		//slidesToScroll: -1,
-		initialSlide: initSlide,
-		nextArrow: '<i class="fa fa-angle-right slick-next" aria-hidden="true"></i>',
-		prevArrow: '<i class="fa fa-angle-left slick-prev" aria-hidden="true"> </i>'
-	});
-
-	$actions.on('afterChange', function(){
-		var currentSlide = $actions.slick('slickCurrentSlide');
-		var hash = '#'+ (currentSlide +1);
-		if(history.pushState) {
-		    history.pushState(null, null, hash);
-		}
-		else {
-		    location.hash = hash;
-		}
-	})
-
-	// $readMoreLinks.click(readMore);
-
-	makeToggleLink('#toggle-signup', '#signup-form', 'Sign Up', 'Hide Form');
-
-	if(!isMobile){
-		makeToggleLink('#calendar-toggle', '#calendar-container', 'Show Calendar', 'Hide Calendar');
-	}
-	else{
-
-	}
 
 });
 

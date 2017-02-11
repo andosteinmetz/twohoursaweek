@@ -31,7 +31,7 @@
   <meta name="description" content="<?php echo $site->description(); ?>">
 
 </head>
-<body>
+<body<?php if ( $page->isHomePage() ){ echo ' class="home"'; }?>>
 
   <header class="wrapper">
     <div class="social-links">
