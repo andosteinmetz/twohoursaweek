@@ -267,6 +267,12 @@ a{
     padding: 1em;
 }
 
+.border-padding{
+    border: .5em solid #000;
+    padding: 1em;
+    background: #ededed;;
+}
+
 @media (max-width: 60em){
     #mc_embed_signup {
         border: .5em solid #000;

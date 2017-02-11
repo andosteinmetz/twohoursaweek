@@ -19,7 +19,7 @@
     <?php snippet('google-forms'); ?>
 
     <?php 
-      $freeform = $pages->find('freeform');
+      $freeform = $pages->find('educate-and-act');
       if($freeform && !$freeform->isInvisible()){
         snippet('freeform', array( 'data' => $freeform) );  
       } 
