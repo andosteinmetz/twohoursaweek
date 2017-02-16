@@ -13,3 +13,7 @@ echo "Title: About\n\n----\n\nText: We imagine ourselves as a venn diagram, an o
 mkdir -p kirby/content/freeform
 
 echo "Title: Freeform Section\n\n----\n\nText: This is an area for editors to put in whatever they want to add." > kirby/content/freeform/default.txt
+
+mkdir -p kirby/content/home
+
+echo "Title: Home\n\n----\n\nIntro: Yay! If you are seeing this, the installation of Kirby worked. :-)\n\nText: " > kirby/content/home/home.txt
