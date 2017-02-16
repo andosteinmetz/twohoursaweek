@@ -17,3 +17,5 @@ echo "Title: Freeform Section\n\n----\n\nText: This is an area for editors to pu
 mkdir -p kirby/content/home
 
 echo "Title: Home\n\n----\n\nIntro: Yay! If you are seeing this, the installation of Kirby worked. :-)\n\nText: " > kirby/content/home/home.txt
+
+echo "Title: 2 Hours A Week\n\n----\n\nAuthor: Two Hours a Week\n\n----\n\nDescription: We are fostering a new level of civic engagement following the 2016 election by offering you 2 hours a week of tangible action.\n\n----\n\nCopyright: &copy; 2017 2 Hours a Week
