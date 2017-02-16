@@ -10,6 +10,6 @@
 
 		<p>This program is cohosted by Hunter Artist Action Group (HAAG) of Hunter MFA and 2 Hours a Week. Events will include teach-ins, workshops, panels, performances, readings, discussions, seminars, screenings, letter writing, sign making, and grassroots organizing. They are made possible by the generosity of our peers and colleagues, who are donating their time, knowledge, and skills to help us together build a strong and aware community of resistance.</p>
 		
-		<p>If you would like to program an event or get more involved, please <a href="mailto:twohoursaweek@gmail.com">contact us</a>.</p>
+		<p> If you'd like to become involved in programming or helping with events, please <a href="mailto:twohoursaweek@gmail.com">contact us</a>.</p>
 	</div>
 </div>
