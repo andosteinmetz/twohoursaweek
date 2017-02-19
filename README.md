@@ -22,6 +22,8 @@ To set up the environment using MAMP:
 * navigate to 2hoursaweek.org/kirby and confirm
 * hit 'OK' and click 'Start Servers'
 
+To access the site admin panel visit `localhost:8888/admin` (or adjust to your environment as required).
+
 ###Structure
 
 The templates for each section of the homepage are defined in `kirby/site/snippets`, as is the code for the header and footer.
