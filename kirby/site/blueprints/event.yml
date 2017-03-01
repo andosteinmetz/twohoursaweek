@@ -1,0 +1,33 @@
+title: Event
+
+options:
+  status: true
+
+fields:
+  title:
+    label: Title
+    type: text
+
+  datetime:
+    label: Date & Time
+    type: datetime
+    default:
+      date: now
+      time: 19.00
+    time:
+      interval: 15
+
+  description:
+    label: description
+    type: textarea
+
+  rsvp_link:
+    label: RSVP link
+    type: text
+
+  program:
+    label: Program
+    type: select
+    options:
+      educate_act: Educate and Act
+

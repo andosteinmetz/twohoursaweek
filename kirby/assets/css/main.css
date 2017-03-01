@@ -509,3 +509,75 @@ a.action-link:hover{
         color: #d2f0d4;
     }
 }
+
+/** EVENT STYLES **/
+
+.event{
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.event__date{
+    float: left;
+    background: #000;
+    color: #fff;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+@media (max-width: 60em){
+    .event__date{
+        float: none;
+        width: 100%;
+        position: static;
+    }
+}
+
+.event__date .inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 6rem;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0%);
+    text-align: center;
+}
+
+@media (max-width: 60em){
+    .event__date .inner{
+        position: static;
+        top: 0;
+        left: 0;
+        transform: none;
+        -webkit-transform: none;
+    }
+}
+
+.event__date .number{
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.event__day-month{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.event__main{
+    padding-left: 35%;
+    padding-right: 5%;
+    padding-bottom: 2em;
+    font-size: .75em;
+}
+
+.event__main p{
+    line-height: 1.5em;
+}
+
+@media (max-width: 60em){
+    .event__main{
+        padding-left: 1em;
+    }
+}
