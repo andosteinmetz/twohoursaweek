@@ -52,6 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="https://twitter.com/2hoursaweek/" target="_blank"><img src="/assets/images/dark-twitter-96.png"></a>
         <a href="mailto:twohoursaweek@gmail.com"><img src="/assets/images/dark-forwardtofriend-96.png"></a>
         <a href="/about" class="footer-link">About</a>
+        <a href="/educate-and-act" class="footer-link">Educate &amp; Act</a>
         <?php echo snippet('donate-button'); ?>
     </div>
     <h1><a href="/"><?php echo $site->title(); ?></a></h1>

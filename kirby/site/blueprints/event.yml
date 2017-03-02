@@ -21,6 +21,14 @@ fields:
     label: description
     type: textarea
 
+  location:
+    label: location
+    type: textarea
+
+  map_link:
+    label: Map Link
+    type: text
+
   rsvp_link:
     label: RSVP link
     type: text

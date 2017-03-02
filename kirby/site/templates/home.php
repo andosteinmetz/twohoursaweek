@@ -14,9 +14,9 @@
 
     <?php snippet('mailchimp'); ?>
 
-    <?php snippet('google-calendar'); ?>
-
     <?php snippet('educate-act-intro') ?>
+
+    <?php snippet('google-calendar'); ?>
 
     <?php snippet('google-forms'); ?>
 
