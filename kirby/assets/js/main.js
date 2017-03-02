@@ -35,6 +35,7 @@ $('document').ready(function(){
 	$calendarContainer = $('#calendar-container');
 	$calendarToggle = $('#calendar-toggle');
 	$readMoreLinks = $('.read-more');
+	$expandEventLinks = $('.event__read-more');
 	$actions = $('#actions');
 	formSelector = document.getElementById('form-selector');
 
@@ -100,6 +101,7 @@ $('document').ready(function(){
 	}
 
 	$('.action main p a').attr('target', '_blank');
+	$expandEventLinks.click(expandEvent);
 
 });
 
@@ -109,6 +111,13 @@ function readMore(){
 	$readMoreLinks.each(function(){
 		$(this).toggleClass('active');
 	});
+}
+
+function expandEvent(e){
+	e.preventDefault();
+	var description = $(this).closest('.event__description');
+	$(this).toggleClass('event__read-more--expanded');
+	$(description).toggleClass('event__description--expanded');
 }
 
 function makeToggleLink(linkSelector, targetSelector, showText, hideText){

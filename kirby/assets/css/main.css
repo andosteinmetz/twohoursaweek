@@ -14,6 +14,10 @@ h1 a{
     text-align: center;
 }
 
+h2 a{
+    text-decoration: none;
+}
+
 @media (max-width: 60em){
     h1{
         font-size: 3em;
@@ -512,9 +516,14 @@ a.action-link:hover{
 
 /** EVENT STYLES **/
 
+.educate-act-intro{
+
+}
+
 .event{
     margin-bottom: 3rem;
     position: relative;
+    box-shadow: 4px 4px 7px #999;;
 }
 
 .event__date{
@@ -570,6 +579,47 @@ a.action-link:hover{
     padding-right: 5%;
     padding-bottom: 2em;
     font-size: .75em;
+}
+
+.event__description{
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 2em;
+    position: relative;
+    transition: max-height 1s ease;
+}
+
+.event__description--expanded{
+    max-height: 5000px !important;
+}
+
+.event__read-more{
+    display: block;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 1)));
+    padding: 4em 0 0 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.event__read-more::after{
+    content: 'SHOW MORE';
+}
+
+.event__read-more--expanded{
+    background-image: none;
+}
+
+.event__read-more--expanded::after{
+    content: 'SHOW LESS';
+}
+
+.event__time{
+    font-weight: bold;
+    font-size: 1.125em;
 }
 
 .event__main p{
