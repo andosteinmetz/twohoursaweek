@@ -2,6 +2,7 @@
 <h2>Upcoming Events</h2>
 <p>Please RSVP</p>
 <?php
+	date_default_timezone_set('America/New_York');
 	$upcoming_events = $pages->find('educate-act-events')->children()->visible()->filter(function($page){
 		return $page->date(null, 'datetime') >= date_timestamp_get(date_create());
 	})
