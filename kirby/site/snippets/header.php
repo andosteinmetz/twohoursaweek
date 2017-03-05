@@ -20,9 +20,12 @@
 
     <!-- for Facebook -->          
     <meta property="og:title" content="2 hours a week" />
-    <meta property="og:type" content="actions" />
+    <?php if($page->intendedTemplate() == 'action' && $page->hasImages()): ?>
+      <meta property="og:image" content="<?php echo $page->image()->url(); ?>">
+      <meta property="og:image:width" content="960" />
+    <?php endif; ?>
     <meta property="og:image" content="http://www.2hoursaweek.org/assets/images/2.png" />
-    <meta property="og:url" content="http://www.2hoursaweek.org" />
+    <meta property="og:url" content="<?php echo $page->url(); ?>" />
     <meta property="og:description" content="We are fostering a new level of civic engagement following the 2016 election by offering you 2 hours a week of tangible action." />
 
     <!-- for Twitter -->          
