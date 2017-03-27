@@ -605,6 +605,14 @@ a.action-link:hover{
     font-weight: bold;
 }
 
+.event-detail .event__description{
+    max-height: none !important;
+}
+
+.event-detail .event__read-more{
+    display: none;
+}
+
 .event__read-more::after{
     content: 'SHOW MORE';
 }
