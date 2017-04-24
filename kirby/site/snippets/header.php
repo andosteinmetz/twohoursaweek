@@ -18,7 +18,7 @@
     <meta name="author" content="2hoursaweek.org" />
     <meta name="application-name" content="http://www/2hoursaweek.org" />
 
-    <!-- for Facebook -->          
+    <!-- for Facebook -->
     <meta property="og:title" content="2 hours a week" />
     <?php if($page->intendedTemplate() == 'action' && $page->hasImages()): ?>
       <meta property="og:image" content="<?php echo $page->image()->url(); ?>">
@@ -28,7 +28,7 @@
     <meta property="og:url" content="<?php echo $page->url(); ?>" />
     <meta property="og:description" content="We are fostering a new level of civic engagement following the 2016 election by offering you 2 hours a week of tangible action." />
 
-    <!-- for Twitter -->          
+    <!-- for Twitter -->
     <meta name="twitter:card" content="2 hours a week" />
     <meta name="twitter:title" content="2 hours a week" />
     <meta name="twitter:description" content="We are fostering a new level of civic engagement following the 2016 election by offering you 2 hours a week of tangible action." />
@@ -55,7 +55,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="https://twitter.com/2hoursaweek/" target="_blank"><img src="/assets/images/dark-twitter-96.png"></a>
         <a href="mailto:twohoursaweek@gmail.com"><img src="/assets/images/dark-forwardtofriend-96.png"></a>
         <a href="/about" class="footer-link">About</a>
-        <a href="/educate-and-act" class="footer-link">Educate &amp; Act</a>
         <?php echo snippet('donate-button'); ?>
     </div>
     <h1><a href="/"><?php echo $site->title(); ?></a></h1>
